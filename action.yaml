@@ -8,5 +8,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: bash ./clean-tree-check.sh ${{ error-reason }}
+    - run: ./clean-tree-check.sh ${{ inputs.error-reason }}
       shell: bash
