@@ -10,3 +10,7 @@ runs:
   steps:
     - run: ./clean-tree-check.sh ${{ inputs.error-reason }}
       shell: bash
+
+branding:
+  icon: "activity"
+  color: "blue"
