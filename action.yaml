@@ -9,7 +9,7 @@ runs:
   using: "composite"
   steps:
     - run: |
-        ./clean-tree-check.sh ${{ inputs.error-reason }}
+        ${GITHUB_WORKSPACE}/clean-tree-check.sh ${{ inputs.error-reason }}
       shell: bash
 
 branding:

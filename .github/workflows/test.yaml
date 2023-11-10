@@ -9,8 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Git Clean Tree
-        uses: ArkadiK94/action-git-clean-tree@v1
       - uses: ./
         with:
           error-reason: last command
