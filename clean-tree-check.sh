@@ -1,5 +1,5 @@
 if [[ -n $(git status -s) ]]; then
-  echo "ERROR: tree is dirty after $@"
+  echo "ERROR: tree is dirty after \"$*\""
   git status
   exit 1
 else
