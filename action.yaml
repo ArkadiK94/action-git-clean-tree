@@ -1,0 +1,12 @@
+name: 'Git Clean Tree'
+description: 'Check Git Clean Tree'
+inputs:
+  error-reason:
+    description: 'Check reason for Git Tree not to be clean'
+    required: true
+    default: "Last command"
+runs:
+  using: "composite"
+  steps:
+    - run: bash ./clean-tree-check.sh ${{ error-reason }}
+      shell: bash
