@@ -8,10 +8,16 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
-      shell: bash
-    - run: |
-        ./clean-tree-check.sh ${{ inputs.error-reason }}
+    - name: check if the git tree is clean
+      run: |
+        if [[ -n $(git status -s) ]]; 
+        then
+          echo "ERROR: tree is dirty after ${{ inputs.error-reason }}"
+          git status
+          exit 1
+        else
+          echo "Working tree is clean."
+        fi
       shell: bash
 
 branding:
