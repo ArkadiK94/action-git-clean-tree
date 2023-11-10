@@ -1,4 +1,4 @@
-name: 'Git Clean Tree'
+name: 'Git Check Clean Tree'
 description: 'Check Git Clean Tree'
 inputs:
   error-reason:
